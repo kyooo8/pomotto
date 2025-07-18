@@ -13,5 +13,13 @@
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx"
   },
-  "nodeModulesDir": "auto"
+  "nodeModulesDir": "auto",
+  "deploy": {
+    "project": "50efd778-819a-41f4-9e23-6241133d3ebc",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "src\\app.ts"
+  }
 }
