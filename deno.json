@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "hono": "jsr:@hono/hono@^4.8.5",
+    "tailwindcss": "npm:tailwindcss@^4.1.11"
+  },
+  "tasks": {
+    "start": "deno run --allow-net --allow-read src/app.ts",
+    "bundle": "deno bundle -o src/static/js/timer.js src/client/timer.tsx && deno bundle -o src/static/js/board.js src/client/board.tsx",
+    "css": "deno run -A npm:tailwindcss -i ./input.css -o ./src/static/style.css",
+    "dev": " deno task bundle && deno task css && deno task start"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  },
+  "nodeModulesDir": "auto"
+}
